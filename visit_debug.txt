@@ -1,0 +1,12 @@
+2025-06-20 14:20:12 | IP: ::1 | Admin: N | Localhost: Y
+EXCLUDED
+2025-06-20 14:33:01 | IP: ::1 | Admin: N | Localhost: Y
+EXCLUDED
+2025-06-20 14:33:17 | IP: ::1 | Admin: Y | Localhost: Y
+EXCLUDED
+2025-06-20 14:38:45 | IP: ::1 | Admin: Y | Localhost: Y
+EXCLUDED
+2025-06-20 14:39:01 | IP: ::1 | Admin: N | Localhost: Y
+EXCLUDED
+LOGGED
+LOGGED
