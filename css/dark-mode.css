@@ -1,0 +1,574 @@
+/* Basic Dark Mode Styles */
+
+/* Apply styles to the body when the dark-mode class is present */
+body.dark-mode {
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+}
+
+/* Adjust text color for some elements in dark mode */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #f0f0f0;
+}
+
+/* Adjust general text color for paragraphs and spans */
+body.dark-mode p,
+body.dark-mode span {
+     color: #ccc;
+}
+
+/* Adjust card background and text in dark mode */
+body.dark-mode .card {
+    background-color: #2c2c2c; /* Slightly lighter dark for cards */
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+body.dark-mode .card-header {
+    background-color: #3a3a3a; /* Darker header for cards */
+    border-color: #444;
+    color: #f0f0f0; /* Ensure header text is light */
+}
+
+/* Adjust table styles in dark mode */
+body.dark-mode .table {
+    color: #f0f0f0;
+}
+
+body.dark-mode .table th {
+    border-bottom-color: #555;
+    color: #f0f0f0; /* Ensure table header text is light */
+}
+
+body.dark-mode .table td {
+    border-top-color: #555;
+}
+
+/* Adjust form control styles in dark mode */
+body.dark-mode .form-control {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #aaa;
+}
+
+/* Adjust background color of common sections */
+body.dark-mode .app_guidence,
+body.dark-mode .review_rating,
+body.dark-mode .contact_section {
+    background-color: #1a1a1a; /* Match body background or slightly different */
+}
+
+/* Adjust the specific gray background section */
+body.dark-mode .add_download_sec.bg_gray {
+     background-color: #222; /* Darker gray */
+}
+
+/* Adjust footer styles */
+body.dark-mode footer {
+    background-color: #111; /* Even darker for footer */
+    color: #ccc;
+}
+
+body.dark-mode footer h5,
+body.dark-mode footer h6 {
+    color: #f0f0f0;
+}
+
+/* Logo styles for both light and dark modes */
+.app-info-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.app-info-logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #34377d, #197dc0);
+    border-radius: 8px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.app-info-logo img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+/* Dark mode specific logo styles */
+body.dark-mode .app-info-logo {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .app-info-logo::before {
+    opacity: 0.2;
+}
+
+body.dark-mode .app-info-logo img {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+/* Light mode specific logo styles */
+body:not(.dark-mode) .app-info-logo {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark-mode) .app-info-logo::before {
+    opacity: 0.15;
+}
+
+body:not(.dark-mode) .app-info-logo img {
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Specific styles for the App Information section within the footer */
+body.dark-mode .app-info-wrapper {
+    background-color: #1a1a1a;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+}
+
+body.dark-mode .app-info-heading h5 {
+    color: #ffffff;
+    border-bottom: 4px double #4a90e2;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 30px 0 20px 0;
+    padding: 0 0 5px 0;
+    letter-spacing: 0.5px;
+}
+
+body.dark-mode .info-main {
+    background-color: #2a2a2a;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .info-main:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .info-main h6 {
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.3px;
+}
+
+body.dark-mode .info-main h5 {
+    color: #4a90e2;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+body.dark-mode .ftr-copyright-rw {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+body.dark-mode .ftr-copyright-rw a {
+    color: #4a90e2;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .ftr-copyright-rw a:hover {
+    color: #6ba7e5;
+    text-decoration: underline;
+}
+
+/* Add responsive styles for better mobile display */
+@media (max-width: 767.98px) {
+    body.dark-mode .app-info-heading h5 {
+        font-size: 24px;
+    }
+    
+    body.dark-mode .info-main {
+        padding: 15px;
+    }
+    
+    body.dark-mode .info-main h6 {
+        font-size: 14px;
+    }
+    
+    body.dark-mode .info-main h5 {
+        font-size: 16px;
+    }
+}
+
+/* Adjust the styles for individual boxes/elements within sections */
+body.dark-mode .r_s_box, /* Right steps boxes */
+body.dark-mode .newsletter-box, /* Newsletter box */
+body.dark-mode .review_box /* Individual review boxes */ {
+    background-color: #282828; /* Darker background for boxes */
+    color: #f0f0f0;
+    border-color: #444; /* Adjust border if they have one */
+}
+
+/* Adjust text within these boxes */
+body.dark-mode .r_s_box h5,
+body.dark-mode .newsletter-box h4 {
+     color: #f0f0f0;
+}
+
+/* Adjust link colors in dark mode if they are hard to see */
+/*
+body.dark-mode a {
+    color: #88ccff; 
+}
+body.dark-mode a:hover {
+    color: #cceeff;
+}
+*/
+
+/* Adjust button styles in dark mode if needed */
+/* Example: making primary button look different */
+/*
+body.dark-mode .btn-primary {
+    background-color: #0056b3;
+    border-color: #004085;
+    color: white;
+}
+*/
+
+/* Adjust background color of sections if they have specific backgrounds */
+/* Example: if a section has a light background */
+/*
+body.dark-mode section {
+    background-color: #222; 
+}
+*/
+
+/* You'll need to add more specific styles here based on your existing CSS */
+/* Inspect elements in your browser to find the classes/IDs to target */
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --text-color: #f8f9fa;
+    --light-bg: #2c3e50;
+    --dark-bg: #1a1a1a;
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --danger-color: #e74c3c;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .navbar {
+    background: var(--light-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .navbar-brand {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .nav-link {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+[data-theme="dark"] .card {
+    background: var(--light-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .form-control {
+    background-color: var(--dark-bg);
+    border-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+[data-theme="dark"] .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table th {
+    background-color: var(--light-bg);
+    border-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .table td {
+    border-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .pagination .page-link {
+    background-color: var(--light-bg);
+    border-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .pagination .page-link:hover {
+    background-color: var(--dark-bg);
+    color: var(--primary-color);
+}
+
+/* Dark Mode Responsive Styles */
+@media (max-width: 1200px) {
+    [data-theme="dark"] .card {
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    [data-theme="dark"] .navbar {
+        padding: 0.8rem 0;
+    }
+    [data-theme="dark"] .card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    [data-theme="dark"] .navbar {
+        padding: 0.6rem 0;
+    }
+    [data-theme="dark"] .card {
+        margin-bottom: 0.8rem;
+    }
+    [data-theme="dark"] .table-responsive {
+        background-color: var(--light-bg);
+    }
+}
+
+@media (max-width: 576px) {
+    [data-theme="dark"] .navbar {
+        padding: 0.5rem 0;
+    }
+    [data-theme="dark"] .card {
+        margin-bottom: 0.6rem;
+    }
+    [data-theme="dark"] .form-control {
+        font-size: 0.9rem;
+    }
+    [data-theme="dark"] .btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark Mode Form Styles */
+[data-theme="dark"] .form-group label {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .form-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .invalid-feedback {
+    color: var(--danger-color);
+}
+
+/* Dark Mode Card Styles */
+[data-theme="dark"] .card-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    border-bottom: none;
+}
+
+[data-theme="dark"] .card-footer {
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--dark-bg);
+}
+
+/* Dark Mode Button Styles */
+[data-theme="dark"] .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Dark Mode Alert Styles */
+[data-theme="dark"] .alert {
+    background-color: var(--light-bg);
+    border-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .alert-primary {
+    background-color: rgba(74, 144, 226, 0.2);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .alert-success {
+    background-color: rgba(46, 204, 113, 0.2);
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+[data-theme="dark"] .alert-warning {
+    background-color: rgba(241, 196, 15, 0.2);
+    border-color: var(--warning-color);
+    color: var(--warning-color);
+}
+
+[data-theme="dark"] .alert-danger {
+    background-color: rgba(231, 76, 60, 0.2);
+    border-color: var(--danger-color);
+    color: var(--danger-color);
+}
+
+/* Dark Mode Modal Styles */
+[data-theme="dark"] .modal-content {
+    background-color: var(--light-bg);
+    border-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .modal-header {
+    border-bottom-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .modal-footer {
+    border-top-color: var(--dark-bg);
+}
+
+/* Dark Mode Dropdown Styles */
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--light-bg);
+    border-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--dark-bg);
+    color: var(--primary-color);
+}
+
+/* Dark Mode Badge Styles */
+[data-theme="dark"] .badge {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .badge-primary {
+    background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .badge-secondary {
+    background-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .badge-success {
+    background-color: var(--success-color);
+}
+
+[data-theme="dark"] .badge-warning {
+    background-color: var(--warning-color);
+}
+
+[data-theme="dark"] .badge-danger {
+    background-color: var(--danger-color);
+}
+
+/* Dark Mode Progress Bar Styles */
+[data-theme="dark"] .progress {
+    background-color: var(--dark-bg);
+}
+
+[data-theme="dark"] .progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Dark Mode List Group Styles */
+[data-theme="dark"] .list-group-item {
+    background-color: var(--light-bg);
+    border-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .list-group-item:hover {
+    background-color: var(--dark-bg);
+}
+
+/* Dark Mode Custom Scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--light-bg);
+    border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+} 
